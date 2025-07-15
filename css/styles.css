@@ -1,0 +1,744 @@
+@font-face {
+    font-family: 'Chronicle Display Semi';
+    src: url('ChronicleDisplay-Semi.woff2') format('woff2'),
+        url('ChronicleDisplay-Semi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.15);
+    --off-black: #111111;
+    --red: #9F001A;
+    --font: "Libre Franklin", sans-serif;
+}
+
+/******************* Typography *******************/
+h1,
+h2,
+h3,
+a {
+    font-family: 'Chronicle Display Semi';
+}
+
+h2 {
+    font-size: 2.35rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+}
+
+body {
+    color: var(--off-black);
+    line-height: 1.5;
+    font-family: var(--font);
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+/******************* Hover states *******************/
+a:hover:not([class]) {
+    text-decoration: underline;
+}
+
+.btn-two:hover {
+    text-decoration: underline;
+}
+
+header .flex-container>a:hover {
+    text-decoration: none;
+}
+
+.hero .link-button:hover,
+.hero .link-button:focus {
+    background-color: white;
+    color: #111111;
+}
+
+.link-button:hover,
+.link-button:focus {
+    background-color: #9F001A;
+    color: #fff;
+}
+
+.tartan-finder div .link-button:hover {
+    background-color: #9F001A;
+    color: #fff;
+}
+
+/********* Nav hover *********/
+.btn:hover {
+    background-color: var(--red);
+    border-radius: .2rem;
+    color: #fff;
+}
+
+nav .flex-container div a:hover {
+    color: var(--red);
+    text-decoration: var(--red) solid underline;
+}
+
+/******************* Universal styles *******************/
+.inner-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.link-button {
+    font-size: 2rem;
+    color: white;
+    background-color: var(--off-black);
+    display: block;
+    width: 20rem;
+    border-radius: .5rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    justify-self: flex-end;
+    transition: 0.15s;
+}
+
+/******************* Header *******************/
+h1 {
+    font-size: 1.95rem;
+    color: #111111;
+}
+
+header svg {
+    width: 2.15rem;
+}
+
+/******************* Navigation *******************/
+.second-level {
+    padding: 0 1.75rem;
+}
+
+header .inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.5rem;
+    position: relative;
+    border-bottom: .0625rem solid black;
+}
+
+nav {
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding-top: .5rem;
+    z-index: 10;
+}
+
+.collapsed {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.expanded {
+    max-height: unset;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+}
+
+nav ul li a svg {
+    position: absolute;
+    left: -999rem;
+}
+
+nav svg {
+    display: block;
+    justify-self: center;
+    width: 2.25rem;
+}
+
+nav .flex-container {
+    display: flex;
+    gap: 1.6rem;
+    border-top: .0625rem solid black;
+    padding: 2.5rem 0;
+}
+
+nav a {
+    display: block;
+    color: var(--off-black);
+    padding: .25rem 0;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: var(--font);
+}
+
+.btn {
+    background-color: unset;
+    border: none;
+    display: flex;
+}
+
+/******************* Hero *******************/
+.hero-image-container {
+    position: relative;
+}
+
+.hero a {
+    align-self: flex-end;
+    margin-right: 1rem;
+}
+
+.hero h2 {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 2.75rem;
+    bottom: -4.25rem;
+    max-width: 15ch;
+    letter-spacing: 1px;
+}
+
+.hero .hero-image-container h2 span {
+    color: var(--off-black);
+    margin-top: -0.75rem;
+    display: block;
+}
+
+.hero p {
+    margin: 6.5rem 0 3rem 0;
+    font-size: 1.5rem;
+}
+
+.hero {
+    padding-bottom: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #9F001A;
+}
+
+/******************* fresh-frae section *******************/
+.fresh-frae img {
+    width: 65%;
+    display: block;
+}
+
+.fresh-frae {
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+    margin: 7rem 0 13.5rem 0;
+}
+
+.fresh-frae picture:nth-of-type(2) {
+    position: absolute;
+    left: 10rem;
+    top: 8.5rem;
+}
+
+.fresh-frae p {
+    margin-bottom: 2rem;
+}
+
+.fresh-frae a {
+    justify-self: flex-start;
+    margin-bottom: 6rem;
+}
+
+/******************* tartan finder section *******************/
+.tartan-finder {
+   
+    color: #ffffff;
+    padding-bottom: 7rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.tartan-background-fix {
+    background-color: #111111;
+}
+
+.celebrate {
+    margin: 0 auto;
+}
+
+.tartan-finder h2 {
+    margin-top: 7rem;
+}
+
+.tartan-finder .link-button {
+    /* white link button */
+    background-color: #ffffff;
+    color: #212121;
+    justify-self: left;
+    margin-top: 2rem;
+}
+
+/******************* Celebrate in style section *******************/
+.celebrate h2 {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.celebrate p {
+    margin-bottom: 2rem;
+}
+
+.celebrate .inner-container .flex-container div {
+    border: 1px solid #CACACA;
+    border-radius: .5rem;
+    margin: 4rem 0;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+
+}
+
+.celebrate .inner-container .flex-container div h3 {
+    font-size: 2rem;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    border-radius: .5rem .5rem 0 0;
+    margin-bottom: 2.5rem;
+}
+
+.celebrate .inner-container .flex-container div p:nth-of-type(1) {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Chronicle Display Semi';
+}
+
+.celebrate .inner-container .flex-container div ul li {
+    line-height: 2;
+    font-size: 1.25rem;
+}
+
+.celebrate .inner-container .flex-container div:not(:nth-of-type(1)) p:nth-of-type(2) {
+    margin: 0 0 3.5rem 0;
+    border-bottom: 1px solid #CACACA;
+    padding-bottom: 3rem;
+}
+
+.celebrate .inner-container .flex-container div a {
+    justify-self: center;
+    margin: 4rem 0;
+}
+
+.celebrate .inner-container .flex-container div span {
+    position: absolute;
+    top: -1.5rem;
+    right: -1rem;
+    background-color: #9F001A;
+    color: #ffffff;
+    border-radius: 2rem;
+    padding: .5rem 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.celebrate .inner-container .flex-container div:nth-of-type(2) {
+    position: relative;
+}
+
+.celebrate .inner-container .flex-container div p:nth-of-type(n + 3) {
+    margin: unset;
+    text-align: left;
+    padding-left: 1rem;
+    color: #414141;
+}
+
+.celebrate .inner-container .flex-container div sup {
+    font-size: .8rem;
+}
+
+/******************* Footer section *******************/
+footer {
+    background-color: #111111;
+    color: white;
+    padding: 7rem 0 2rem 0;
+    margin-top: 8rem;
+}
+
+footer a {
+    color: white;
+    font-family: var(--font);
+}
+
+footer h2,
+footer p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer p {
+    color: #D8D8D8;
+}
+
+.line-separator {
+    border-bottom: 1px solid #ffffff;
+    margin: 5rem 0;
+}
+
+footer div div p {
+    text-align: left;
+    margin: 1rem 0;
+}
+
+footer div div p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+footer h3 {
+    font-size: 1.3rem;
+    font-family: var(--font);
+    font-weight: 500;
+}
+
+footer address,
+footer ul li a {
+    font-weight: 100;
+}
+
+footer h3:nth-of-type(2) {
+    margin-bottom: 1rem;
+}
+
+address {
+    margin-bottom: 5rem;
+}
+
+footer li {
+    margin-bottom: .5rem;
+}
+
+footer ul {
+    margin-bottom: 5rem;
+    margin-top: .75rem;
+}
+
+/******************* Media Queries 1024px - tablet *******************/
+@media screen and (min-width: 800px) {
+
+    /* global h2 */
+    h2 {
+        font-size: 3rem;
+    }
+
+    /* header */
+    header .inner-container {
+        padding: 1rem 3rem 0 3rem;
+    }
+
+    /* hero section */
+    .hero h2,
+    .hero p {
+        margin-left: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 3.5rem;
+        bottom: -5rem;
+    }
+
+    .hero p {
+        width: 62%;
+    }
+
+    .hero a {
+        align-self: center;
+    }
+
+    /* fresh frae section */
+    .fresh-frae .inner-container {
+        padding: 0 9rem;
+    }
+
+    .fresh-frae picture:nth-of-type(2) {
+        left: 15rem;
+        top: 10rem;
+    }
+
+    /*tartan-finder-section*/
+    section.tartan-finder {
+        display: flex;
+        padding: unset;
+        padding: 0 0 0 3rem;
+    }
+
+    .tartan-finder picture {
+        order: 2;
+        margin: 0;
+        padding: 0;
+        width: 65rem;
+    }
+
+    .tartan-finder picture img {
+        height: 100%;
+    }
+
+    .tartan-finder a.link-button {
+        margin: 4rem 0;
+    }
+
+    /* celebrate in style section */
+    .celebrate {
+        padding: 0 9rem;
+    }
+
+    /* footer */
+    footer .inner-container>p {
+        padding: 0 9rem;
+    }
+
+    footer .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer .flex-container>div {
+        width: 50%;
+    }
+}
+
+/******************* Media Queries 1440px - desktop *******************/
+@media screen and (min-width: 1440px) {
+
+    /* hero */
+    .hero h2 {
+        font-size: 4.5rem;
+        bottom: -6rem;
+    }
+
+    .hero .hero-image-container h2 span {
+        margin-top: -2rem;
+    }
+
+    .hero p {
+        width: 50%;
+    }
+
+    /* Fresh Frae */
+    .fresh-frae {
+        padding-bottom: 4rem;
+    }
+
+    .fresh-frae picture:nth-of-type(2) {
+        left: 19.5rem;
+        top: 17.5rem;
+    }
+
+    .fresh-frae .inner-container {
+        margin: 0 auto;
+    }
+
+    .fresh-frae picture img {
+        width: 60rem;
+        height: 25rem;
+    }
+
+    .fresh-frae .inner-container {
+        display: flex;
+        gap: 18rem;
+        padding: 0 4.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .fresh-frae .inner-container div .link-button {
+        margin: unset;
+    }
+
+    .relative {
+        margin: 7rem 0 13.5rem 0;
+    }
+
+    .fresh-frae picture:nth-of-type(2) {
+        position: absolute;
+        left: 10.5rem;
+        top: 11.5rem;
+    }
+
+    /* tartan-finder */
+    .tartan-finder picture,
+    .tartan-finder div {
+        max-width: 50%;
+    }
+
+    .tartan-finder h2 {
+        margin-top: 7rem;
+    }
+
+    .tartan-finder div .link-button {
+        margin-bottom: 7rem;
+    }
+
+    /* celebrate */
+    .celebrate .inner-container>p {
+        width: 60%;
+        margin: 0 auto 2rem auto;
+    }
+
+    .celebrate .inner-container .flex-container p {
+        padding: 0 1rem;
+    }
+
+    .celebrate .flex-container {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .celebrate .flex-container div {
+        min-width: calc((100% / 3) - (4rem / 3));
+        height: 79rem;
+        position: relative;
+        padding: 0 1rem;
+    }
+
+    .celebrate .flex-container div:nth-of-type(2) {
+        height: 82rem;
+        margin: 2.5rem 0;
+    }
+
+    .celebrate .inner-container .flex-container div:nth-of-type(1) p {
+        border-bottom: none;
+    }
+
+    .celebrate {
+        padding: 0 3rem;
+    }
+
+    .celebrate .inner-container .flex-container div .link-button {
+        position: absolute;
+        bottom: 0;
+        left: 5rem;
+        right: 5rem;
+    }
+
+    .celebrate .inner-container .flex-container div h3 {
+        margin: 0 -1rem 2rem -1rem;
+
+    }
+
+    .celebrate .inner-container .flex-container div p {
+        padding-left: 0rem;
+    }
+
+    /* Footer */
+    footer .flex-container {
+        flex-wrap: nowrap;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    footer .flex-container2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer {
+        padding: 6rem 5rem 0 5rem;
+    }
+
+    footer .flex-container div {
+        width: unset;
+    }
+
+    footer .inner-container {
+        padding: unset;
+    }
+
+    footer .inner-container>p {
+        max-width: 63%;
+        margin: 0 auto 2rem auto;
+    }
+
+    /********* toggle menu *********/
+    .collapsed {
+        visibility: visible;
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    header .inner-container {
+        position: static;
+        border: none;
+        padding: 0 4rem;
+    }
+
+    header button svg {
+        display: none;
+    }
+
+    nav .flex-container {
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        gap: unset;
+    }
+
+    nav .flex-container div {
+        align-self: center;
+    }
+
+    nav .flex-container svg {
+        width: 2rem;
+    }
+
+    nav {
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: unset;
+        padding-top: unset;
+        gap: 7.5rem;
+    }
+
+    .second-level {
+        position: absolute;
+        left: 0rem;
+        top: 5rem;
+        background-color: #fff;
+        border-radius: 0 0 .3rem .3rem;
+        line-height: 2;
+        padding: 1rem .5rem;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .expansion {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.3s;
+    }
+
+    .main-level {
+        display: flex;
+    }
+
+    .main-level li a {
+        display: flex;
+        gap: .3rem;
+    }
+
+    .main-level li a svg {
+        width: 1.7rem;
+    }
+
+    nav ul li a svg {
+        /* svg icon for shop */
+        position: static;
+        left: 0;
+    }
+}
