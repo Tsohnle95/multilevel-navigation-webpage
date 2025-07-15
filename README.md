@@ -9,7 +9,7 @@ A single-page, responsive website built as part of my NAIT Web Development cours
 
 ## 🚀 Live Demo
 
-[View on GitHub Pages](https://yourusername.github.io/responsive-multilevel-nav-site/)
+[View on GitHub Pages](https://tsohnle95.github.io/responsive-multilevel-nav-site/)
 
 ## 🧵 Project Overview
 
